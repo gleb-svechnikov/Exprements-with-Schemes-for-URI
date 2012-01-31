@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	<script type="text/javascript" src="http://snaidero1.nichost.ru/misc/jquery.js?v=1.4.4"></script>
+	<script type="text/javascript" src="http://snaidero1.nichost.ru/sites/default/files/js/easing.js"></script>
+	<script type="text/javascript" src="http://snaidero1.nichost.ru/sites/default/files/js/cycle.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+	<title></title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.kitchen_pics').after('<div class="kitchen_menu">').cycle({ 
+		    	fx:     'fade', 
+		    	speed:  'slow', 
+		    	timeout: 0, 
+		    	pager:  '.kitchen_menu', 
+		    	pagerAnchorBuilder: renderLinks
+			});
+			function renderLinks(index, link){
+				 $('.kitchen_menu').append(
+				 	$('<a/>')
+				 		.attr('href', '#')
+					 	.text(link.getAttribute('title'))
+					 	.click(function() {
+					 		$('.kitchen_pics').cycle(index)
+					 	})
+				 );
+				 
+			};
+			$('.kitchen_menu').before('<img src="pininfarina.jpg" class="designer">')
+	    });
+   	</script>
+
+</head>
+<body style="background: black;">
+<div class="wrapper">
+	<div class="kitchen_pics" >
+		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/Ola.jpg" title="Ola">
+		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/viva.jpg" title="Viva">
+		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/Idea.jpg" title="Idea" >
+		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/Acropolis.jpg" title="Acroplis">
+		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/Venus.jpg" title="Venus">
+	</div>
+</div>
+</body>
+</html>
+<div class="page-article">
+	<img src="/sites/default/files/pictures/showroom/special_offers/technics/ola/1.jpg">
+	<ul class="kitchen_details">
+		<li>Вытяжка островная Ola;</li>
+	    <li>Мощность 800 м/час</li>
+	    <li>Размер 150 х 80 см</li>
+	</ul>
+	<table class="price">
+		<tbody>
+			<tr><td>Цена</td> <td>- 4.900 евро</td></tr>
+			<tr><td>Скидка</td> <td>- 60%</td></tr>
+			<tr><td>Цена со скидкой</td> <td>- 1.960 евро</td></tr>
+		</tbody>
+</div>
+
