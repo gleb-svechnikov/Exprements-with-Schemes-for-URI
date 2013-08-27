@@ -1,49 +1,41 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	
-	<script type="text/javascript" src="http://snaidero1.nichost.ru/misc/jquery.js?v=1.4.4"></script>
-	<script type="text/javascript" src="http://snaidero1.nichost.ru/sites/default/files/js/easing.js"></script>
-	<script type="text/javascript" src="http://snaidero1.nichost.ru/sites/default/files/js/cycle.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
-	<title></title>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.kitchen_pics').after('<div class="kitchen_menu">').cycle({ 
-		    	fx:     'fade', 
-		    	speed:  'slow', 
-		    	timeout: 0, 
-		    	pager:  '.kitchen_menu', 
-		    	pagerAnchorBuilder: renderLinks
-			});
-			function renderLinks(index, link){
-				 $('.kitchen_menu').append(
-				 	$('<a/>')
-				 		.attr('href', '#')
-					 	.text(link.getAttribute('title'))
-					 	.click(function() {
-					 		$('.kitchen_pics').cycle(index)
-					 	})
-				 );
-				 
-			};
-			$('.kitchen_menu').before('<img src="pininfarina.jpg" class="designer">')
-	    });
-   	</script>
-
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>URI prefixes test page</title>
+  <meta name="description" content="Experements with schemes for URI">
+  <meta name="author" content="Gleb Svechnikov">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script><style type="text/css"></style>
 </head>
-<body style="background: black;">
-<div class="wrapper">
-	<div class="kitchen_pics" >
-		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/Ola.jpg" title="Ola">
-		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/viva.jpg" title="Viva">
-		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/Idea.jpg" title="Idea" >
-		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/Acropolis.jpg" title="Acroplis">
-		<img src="http://snaidero1.nichost.ru/sites/default/files/designers/Venus.jpg" title="Venus">
-	</div>
-</div>
-</body>
-</html>
-</div>
 
+<body>
+    <h2>Links</h2>
+    <a href="http://gleb.svechnikov.me">Open link</a>
+    <a href="https://paypal.com">Open secure link</a>
+    <h2>About</h2>
+    <a href="about://addons">About GPU</a>
+    <h2>Communication</h2>
+    <a href="mailto:gleb.svechnikov@gmail.com">Open Email app</a>
+    <a href="callto:gleb.svechnikov">Call to </a>
+    <a href="skype:gleb.svechnikov">Call to skype</a>
+    <a href="gtalk:chat?jid=gleb.svechnikov@gmail.com">Call to Gtalk</a>
+    <a href="tel:+79118210247">Call to phone number</a>
+    <a href="sms:+79118210247">SMS to phone number</a>
+    <h2>App oriented</h2>
+    <a href="feed://feeds.feedburner.com/html5rocks?format=xml">Open feed</a>
+    <a href="ibooks://">Book?</a>
+    <a href="market://details?id=com.appliness.applinessAndroid&amp;hl=en">Open Appliness Android app</a>
+    <a href="itms-apps://">Apple store</a>
+    <h2>Geographic Locations</h2>
+    <a href="maps:ll=59.9695,30.3145&amp;z=11&amp;t=m">Open my location via maps</a>
+    <a href="geo:59.925794,30.386971">Open my location via geo</a>
+    <a href="comgooglemaps://?center=59.925794,30.386971&amp;zoom=12">Google maps</a>
+    <h2>Others</h2>
+    <a href="lastfm://globaltags/rock">Open LastFM stream</a>
+    <a href="git://github.com/mbostock/d3.git">Open Git project</a>
+	<a href="dict://hello">Dictionary</a>
+  <script src="js/scripts.js"></script>
+
+</body></html>
