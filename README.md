@@ -1,0 +1,21 @@
+Exprements with [URI schemes](https://en.wikipedia.org/wiki/List_of_URI_schemes)
+Testing functionality of following URI scheme prefixes:
+- http:
+- https:
+- mailto:
+- about:
+- callto:
+- skype:
+- gtalk:
+- tel:
+- sms:
+- feed:
+- ibooks:
+- itms(-apps):
+- market:
+- maps:
+- geo:
+- comgooglemaps:
+- lastfm:
+- git:
+- dict:
